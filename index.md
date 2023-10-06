@@ -54,7 +54,7 @@ By the end of development, this algorithm should have a prediction accuracy of a
    Predicting outcomes in sports and athlete performances is an ideal domain for machine learning due to the wealth of readily available data in major leagues like the NBA, NFL, and MLB. These sports offer data that is often randomly distributed, making it an appealing dataset for prediction. The NBA, in particular, stands out for machine learning applications because player performance across various positions can be assessed using the same set of statistics, unlike sports like the NFL where different positions are evaluated using distinct metrics. Furthermore, the use of machine learning for predicting individual athlete performances naturally extends to forecasting game outcomes. By predicting the scoring abilities of each player and aggregating them, it becomes possible to create an accurate win-loss classifier. This project aimed to develop a model using linear regression (with Naïve Bayes and SVM implementations for comparison) to predict the number of points NBA players would score against a given opponent.
 
    _Reference_: \
-    [https://cs229.stanford.edu/proj2012/Wheeler-PredictingNBAPlayerPerformance.pdf](https://cs229.stanford.edu/proj2012/Wheeler-PredictingNBAPlayerPerformance.pdf)
+    K. Wheeler, “Predicting NBA Player Performance,” Stanford University, https://cs229.stanford.edu/proj2012/Wheeler-PredictingNBAPlayerPerformance.pdf (accessed Oct. 5, 2023).
 
 3. **Predicting the Outcomes of NBA Games** \
    _Summary_: \
@@ -73,8 +73,8 @@ This is [our proposed timeline](https://docs.google.com/spreadsheets/d/1ZIS8XA_f
 | ----------------------- | ------------------------------------------ |
 | Abdul-Falik Assa        | Potential Results & Discussions, Research  |
 | Alexus Bernard Brooklyn | Introduction/Background, Methods, Research |
-| Parker Sargis Hakobyan  | Video                                      |
-| Rafy Muhammad Akbar     | Github Page, Research                      |
+| Parker Sargis Hakobyan  | Video Recording, Research                  |
+| Rafy Muhammad Akbar     | Github Page, Presentation Slides, Research |
 | Wentao Yue              | Problem Definition, Research               |
 
 ## **Checkpoint**
@@ -109,5 +109,3 @@ Dataset we currently plan on using:
    - eFG%: Effective FG% (weighted for 3PA)
    - TS%: True FG% (adj. for FT and 3PA)
    - OffRtg: Offensive rating (measure of points produced per 100 possessions)
-
-## **Presentation Video**
