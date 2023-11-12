@@ -20,6 +20,12 @@ We will be working on a ML project where we are predicting an NBA Player’s Per
 
 Basketball Player Evaluation Metrics are essential for analyzing NBA players' performances objectively. They break down a player's contributions into categories like scoring efficiency, individual value, and adjust plus-minus, providing insights for coaches and teams to make informed decisions. These metrics aid in player development and strategic planning. They also facilitate fair player comparisons, crucial in the diverse NBA. Metrics influence contract negotiations, scouting, and the draft, helping identify talent. Moreover, they engage fans by offering insights beyond on-court actions, enriching the overall experience.
 
+### **Data Colletion**
+
+The dataset we used for data collection was gathered from the NBA official website, which contained NBA games from 2012 up until 2023. We used a Python based API web scraper to collect data from around 9 years and various seasons from 2012 to 2021. To make data more efficient, we selected players in each season to collect data from. The features we are most interested in looking at are the win shares and player efficiency rating. An important observation from the outcome that we want to investigate further is that how win shares can greatly impact a single player's morality and potentially their performance within the next games they play. As an additional feature, we will add the value over replacement players to see its potential influence on its respective current game. We are trying to use correlation matrix to give us a comprehensive view of different variables in the dataset. For data cleaning, first use panda is a method to help us detect if our dataset contains missing values, then we remove the duplicate rows. We also remove non-important features and unuseful columns. Then we change some of the feature or column names to make data understandable. Below shows the final cleaned dataset. The detailed table of data can be found in Github.
+
+![Data Collection](/data_collection.png){: width="750" }
+
 ### **Methods**
 
 $$ \theta=(X^T X)^{-1}X^T y $$
