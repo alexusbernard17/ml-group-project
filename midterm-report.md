@@ -10,8 +10,7 @@ permalink: /midterm-report/
 [Results and Discussions](#potential-results-and-discussions) \
 [Peer Reviewed References](#peer-reviewed-references) \
 [Proposed Timeline](#proposed-timeline) \
-[Contribution Table](#contribution-table) \
-[Checkpoint](#checkpoint)
+[Contribution Table](#contribution-table)
 
 ### **Introduction/Background**
 
