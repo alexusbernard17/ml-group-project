@@ -64,43 +64,10 @@ This is [our proposed timeline](https://docs.google.com/spreadsheets/d/1ZIS8XA_f
 
 ### **Contribution Table**
 
-| Name                    | Contribution                               |
-| ----------------------- | ------------------------------------------ |
-| Abdul-Falik Assa        | Potential Results & Discussions, Research  |
-| Alexus Bernard Brooklyn | Introduction/Background, Methods, Research |
-| Parker Sargis Hakobyan  | Video Recording, Research                  |
-| Rafy Muhammad Akbar     | Github Page, Presentation Slides, Research |
-| Wentao Yue              | Problem Definition, Research               |
-
-### **Checkpoint**
-
-This is an example of a dataset we will be using for our project. In this example, we will be looking at LeBron James’ stats for the past 3 seasons and the team’s stats as well.
-
-- LeBron James 2020-2021, 2021-2022, 2022-2023 Season Player Stats [(Reference)](https://www.basketball-reference.com/players/j/jamesle01.html)
-- Los Angeles Lakers 2020-2021 Season Team Stats [(Reference)](https://www.basketball-reference.com/teams/LAL/2022.html)
-- Los Angeles Lakers 2021-2022 Season Team Stats [(Reference)](https://www.basketball-reference.com/teams/LAL/2022.html)
-- Los Angeles Lakers 2022-2023 Season Team Stats [(Reference)](https://www.basketball-reference.com/teams/LAL/2022.html)
-
-Dataset we currently plan on using:
-
-1. **Team Stats**
-
-   - Pace: Average possessions per game
-   - OPTS: Opponents points scored
-   - OFG%: Opponents field-goal %
-   - OTOR: Opponents turnover rate
-   - DRR: Percentage of defensive rebounds made
-   - O%Rim: Opponents shots taken near rim
-   - O%Short: Opponents shots taken within 10 feet
-   - OXeFG%: Expected FG% allowed
-   - OeFG%: Effective FG% allowed
-   - TRR: Total rebound rate
-
-2. **Player’s Stats**
-
-   - MINS: Minutes played
-   - FGA: Shots attempted
-   - FTA: Free throw shots attempted
-   - eFG%: Effective FG% (weighted for 3PA)
-   - TS%: True FG% (adj. for FT and 3PA)
-   - OffRtg: Offensive rating (measure of points produced per 100 possessions)
+| Name                    | Contribution                                                              |
+| ----------------------- | ------------------------------------------------------------------------- |
+| Abdul-Falik Assa        | Data Collection, Methods, Results & Discussions                           |
+| Alexus Bernard Brooklyn | Data Collection, Methods, Introduction/ Background, Results & Discussions |
+| Parker Sargis Hakobyan  | Data Collection, Methods, Results & Discussions                           |
+| Rafy Muhammad Akbar     | Data Collection, Methods, Github Page, Results & Discussions              |
+| Wentao Yue              | Data Collection, Pre-processing Data, Methods                             |
