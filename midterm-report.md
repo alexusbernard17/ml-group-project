@@ -15,7 +15,7 @@ permalink: /midterm-report/
 
 ### **Introduction/Background**
 
-We will be working on a ML project where we are predicting an NBA Player’s Performance. We will mainly focus on predicting their points for specific games. So far, some research and implementation have been performed to predict a player’s performance, however there is no solid evidence if it has actually been implemented by real professionals and NBA Team’s Front Offices. We were inspired by the research conducted by Kevin Wheeler and the documentation he provided. The dataset we currently plan to use will be a combination of the player’s stats (per game), as well as the team and opponent’s team stats. We will cover this more in depth on the methods section.
+We will be working on a ML project where we are predicting an NBA Player’s Performance. We will mainly focus on predicting their points for specific games. So far, some research and implementation have been performed to predict a player’s performance, however there is no solid evidence if it has actually been implemented by real professionals and NBA Team’s Front Offices. We were inspired by the research conducted by Kevin Wheeler and the documentation he provided. The dataset we currently plan to use will be a combination of the player’s stats (per game), as well as the opponent's team defensive statistics. We had multiple literature reviews on some of the potential methods/ implementation we wanted to work on for this project, and we were also impressed on how the NBA are now transitioning to this AI and ML era and how beneficial it would be not only for NBA Teams and the Players, but also for its fans. The application of machine learning and deep learning in sport: predicting NBA players’ performance and popularity by Nguyen Hoang Nguyen, Duy Thien An Nguyen, Bingkun Ma & Jiang Hu, Predicting the Outcomes of NBA Games by T. Horvat, J. Job, R. Logozar, and Č. Livada, as well as Predicting NBA Players Performance by Kevin Wheeler.
 
 ### **Problem Definition**
 
@@ -29,7 +29,7 @@ We are planning to use linear regression to predict the number of points each pl
 
 We are planning to utilize the sckit-learn library to calculate and perform the linear regression calculations for our prediction, as well as the Basketball Reference API to get these datasets.
 
-### **Potential Results and Discussions**
+### ** Results and Discussions**
 
 By the end of development, this algorithm should have a prediction accuracy of at least 50 percent for each player performance category, measured using standard classification metrics. We will test this model during the upcoming NBA season. The insights gained from our model can be valuable to NBA teams, sports bettors, and fantasy sports enthusiasts. The predictions made by our model will be biased by past historical data and will not take into account unforeseen events such as injuries, suspensions, etc.
 
