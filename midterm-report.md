@@ -28,7 +28,7 @@ We are planning to use linear regression to predict the number of points each pl
 
 We are planning to utilize the sckit-learn library to calculate and perform the linear regression calculations for our prediction, as well as the Basketball Reference API to get these datasets.
 
-### ** Results and Discussions**
+### **Results and Discussions**
 
 By the end of development, this algorithm should have a prediction accuracy of at least 50 percent for each player performance category, measured using standard classification metrics. We will test this model during the upcoming NBA season. The insights gained from our model can be valuable to NBA teams, sports bettors, and fantasy sports enthusiasts. The predictions made by our model will be biased by past historical data and will not take into account unforeseen events such as injuries, suspensions, etc.
 
