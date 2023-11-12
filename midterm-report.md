@@ -24,15 +24,19 @@ Basketball Player Evaluation Metrics are essential for analyzing NBA players' pe
 
 The dataset we used for data collection was gathered from the NBA official website, which contained NBA games from 2012 up until 2023. We used a Python based API web scraper to collect data from around 9 years and various seasons from 2012 to 2021. To make data more efficient, we selected players in each season to collect data from. The features we are most interested in looking at are the win shares and player efficiency rating. An important observation from the outcome that we want to investigate further is that how win shares can greatly impact a single player's morality and potentially their performance within the next games they play. As an additional feature, we will add the value over replacement players to see its potential influence on its respective current game. We are trying to use correlation matrix to give us a comprehensive view of different variables in the dataset. For data cleaning, first use panda is a method to help us detect if our dataset contains missing values, then we remove the duplicate rows. We also remove non-important features and unuseful columns. Then we change some of the feature or column names to make data understandable. Below shows the final cleaned dataset. The detailed table of data can be found in Github.
 
-![Data Collection](/data_collection.png){: width="750" }
+![Data Collection](/data-collection.jpeg)
+![Clean Data](/clean-data.jpeg)
 
 ### **Methods**
 
-$$ \theta=(X^T X)^{-1}X^T y $$
+**Gaussian Naive Bayes**:
+We employed a Gaussian Naive Bayes model to forecast the player performance. The implementation was carried out using the scikit-learn library.
 
-We are planning to use linear regression to predict the number of points each player would score against a specific opponent, as indicated by the equation. The training dataset encompassed statistics from all games played by each player over the past three seasons. In the equation, represented the parameter vector, X was the training set with rows representing each game and columns as features, and y represented the training outcomes. After calculating regression parameters for each player using their three-season game data, these parameters were used to predict scoring outcomes against future opponents. The dataset we will be using is going to be a combination of the player’s statistics, team’s statistics, and opponent’s statistics which will be covered in more detail on the Checkpoint section.
+**Support Vector Machines (SVM)**:
+Collect and preprocess relevant player data, split it into training and testing sets, and choose SVM parameters such as kernel type and hyperparameters. We trained a Support Vector Machine (SVM). The scikit-learn library was utilized for the implementation of the SVM.
 
-We are planning to utilize the sckit-learn library to calculate and perform the linear regression calculations for our prediction, as well as the Basketball Reference API to get these datasets.
+**LightGBM Regressor**
+Install LightGBM, set regression parameters, and create LightGBM datasets. Train the model and evaluate its performance using mean squared error on the testing set. Analyze feature importance to understand the factors influencing player performance.
 
 ### **Results and Discussions**
 
