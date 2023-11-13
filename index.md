@@ -37,6 +37,11 @@ An important observation from the outcome that we want to investigate further is
 ![Data Collection](/data-collection.jpeg)
 ![Clean Data](/clean-data.jpeg)
 
+Dataset Links:
+
+- https://docs.google.com/spreadsheets/d/1bh-x5K7iBCv77ziqiPlaP8FnXWLJtqhI75LLbUF4d2s/edit#gid=884741645
+- https://docs.google.com/spreadsheets/d/1TddPNUiZ9ojr-q_wrhDBtvX0DRF0NjsQFcDNTvTCWhE/edit#gid=125670641
+
 ## **Methods**
 
 **Linear Regression**:
