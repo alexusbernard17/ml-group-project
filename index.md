@@ -8,6 +8,8 @@
 layout: base
 ---
 
+## Midterm Report
+
 [Introduction/Background](#introductionbackground) \
 [Problem Definition](#problem-definition) \
 [Data Collection](#data-collection) \
