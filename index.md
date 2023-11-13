@@ -8,7 +8,6 @@
 layout: base
 ---
 
-### Current Progress
+# Welcome to Team 45's Github Page
 
-[Proposal](\ml-group-project\proposal) \
-[Midterm Report](\ml-group-project\midterm-report)
+Navigate to the navbar links above.

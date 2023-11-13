@@ -22,54 +22,36 @@ Basketball Player Evaluation Metrics are essential for analyzing NBA players' pe
 
 ### **Data Colletion**
 
-The dataset used for data collection was gathered from the NBA official website and contained NBA games from 2012 up until 2023. A Python-based API web scraper was employed to collect data spanning nine years and various seasons from 2012 to 2021. To enhance data efficiency, we selected specific players in each season for data collection. The primary features of interest are win shares and player efficiency rating. An important observation prompting further investigation is how win shares can significantly impact a single player's morale and potentially influence their performance in subsequent games.
-
-As an additional feature, we included the value over replacement players to assess its potential influence on the player's performance in their current game. We aim to use a correlation matrix to provide a comprehensive view of the relationships between different variables in the dataset.
-
-For data cleaning, we initially used pandas to detect missing values in our dataset, followed by the removal of duplicate rows. Non-essential features and uninformative columns were also excluded. Additionally, some feature or column names were modified to enhance the overall understandability of the data. The final cleaned dataset is provided in detail in the table available on GitHub.
+The dataset we used for data collection was gathered from the NBA official website, which contained NBA games from 1996 up until 2023. We used a Python based API web scraper to collect data from around 9 years and various seasons from 2012 to 2021. In addition, the MVP dataset is from the Basketball Performance website which shows all the MVP of the year. To make data more efficient, we selected players in each season to collect data from. The features we are most interested in looking at are the value over replacement players and win shares. An important observation from the outcome that we want to investigate further is that how win shares can greatly impact a single player's morality and potentially their performance within the next games they play. As an additional feature, we will add the player efficiency rating to see its potential influence on its respective current game. We are trying to use correlation matrix to give us a comprehensive view of different variables in the dataset. For data cleaning, first use panda is a method to help us detect if our dataset contains missing values, then we remove the duplicate rows. We also remove non-important features and unuseful columns. Then we change some of the feature or column names to make data understandable. Below shows the final cleaned dataset. The detailed table of data can be found in Github.
 
 ![Data Collection](/data-collection.jpeg)
 ![Clean Data](/clean-data.jpeg)
 
 ### **Methods**
 
-**Gaussian Naive Bayes**:
-We employed a Gaussian Naive Bayes model to forecast the player performance. The implementation was carried out using the scikit-learn library.
+**Linear Regression**:
+Linear regression is employed to build the predictive model, leveraging libraries like scikit-learn in Python. Model evaluation involves assessing performance using metrics like Mean Squared Error, and coefficients are interpreted to understand the impact of each feature on performance.
 
-**Support Vector Machines (SVM)**:
-Collect and preprocess relevant player data, split it into training and testing sets, and choose SVM parameters such as kernel type and hyperparameters. We trained a Support Vector Machine (SVM). The scikit-learn library was utilized for the implementation of the SVM.
+**XGBoost**:
+Create an XGBoost model, using XGBRegressor for regression or XGBClassifier for classification, and train it on the designated training set. Evaluate the model on the testing set using appropriate metrics, such as Mean Squared Error for regression or Accuracy for classification.
 
 **LightGBM Regressor**
 Install LightGBM, set regression parameters, and create LightGBM datasets. Train the model and evaluate its performance using mean squared error on the testing set. Analyze feature importance to understand the factors influencing player performance.
 
 ### **Results and Discussions**
 
-By the end of development, this algorithm should have a prediction accuracy of at least 50 percent for each player performance category, measured using standard classification metrics. We will test this model during the upcoming NBA season. The insights gained from our model can be valuable to NBA teams, sports bettors, and fantasy sports enthusiasts. The predictions made by our model will be biased by past historical data and will not take into account unforeseen events such as injuries, suspensions, etc.
+For this Midterm report, we are creating a model to predict the MVP winner for each NBA Regular Season. We already have cleaned pre-processed data as mentioned from the Data Cleaning section above for our model. For Data Pre-Processing, we had to do some feature selections on selecting which statistics we wanted to use to train our model to predict the MVP, all of which have been discussed in our Data Collection Section. We decided to use Linear Regression Supervised Learning to create, train and test our model and we and here are the results:
 
-### **Peer Reviewed References**
+- **Average MAE**: 0.1453
+- **Average R Squared**: 0.4717
+- **Prediction Accuracy**: 0.6483
 
-1. **The application of machine learning and deep learning in sport: predicting NBA players’ performance and popularity** \
-   _Summary_: \
-   This study focuses on using data analysis techniques to predict players' future performance and their likelihood of being selected for the NBA All-Star game, a prestigious event in the National Basketball Association (NBA) league. Traditional Machine Learning and Deep Learning methods were applied for prediction. However, Deep Learning's performance was found to be less effective due to the relatively small and structured dataset with limited predictor variables. The results, obtained through Regression and Classification Analysis, showed that scoring is the most crucial factor for primary players in any team, and it significantly influences a player's popularity.
+![Result 1](/result.png)
+![Result 2](/result2.png)
 
-   The NBA is a highly profitable sports league, and this study aimed to evaluate the application of Machine Learning and Deep Learning in analyzing basketball player data. The study's objectives included predicting players' future performance and their popularity, particularly their selection for the NBA All-Star game. The popularity of players has a significant impact on their franchises' brands and the league's overall revenue. The research applied CRISP-DM methodology, which consists of six phases, to construct ML and DL models, with a focus on the first five phases. The study also discussed the limitations of using Deep Learning on relatively small and structured datasets for basketball data analysis.
+To improve our model for the future iterations, here are some ideas that we think might be good for us to implement. To enhance the performance of our linear regression model, we can also curate the feature set by selecting those with a strong linear relationship to the target variable and eliminating irrelevant or redundant ones that might introduce noise. Some more preprocessing can also be done by handling missing data through imputation or removal and addressing outliers that can significantly impact model accuracy. We should also think about normalizing or standardizing features aids in achieving convergence and stability. Incorporation of polynomial features can further enhance the model's ability to capture complex, non-linear relationships within the data. Multicollinearity, a potential source of instability, should be identified and mitigated by removing highly correlated features in our dataset, and regularization techniques such as L1 or L2 regularization can be applied to prevent overfitting.
 
-   _Reference_: \
-    Nguyen Hoang Nguyen, Duy Thien An Nguyen, Bingkun Ma & Jiang Hu (2022) The application of machine learning and deep learning in sport: predicting NBA players’ performance and popularity, Journal of Information and Telecommunication, 6:2, 217-235, DOI: 10.1080/24751839.2021.1977066
-
-2. **Predicting NBA Players Performance** \
-   _Summary_: \
-   Predicting outcomes in sports and athlete performances is an ideal domain for machine learning due to the wealth of readily available data in major leagues like the NBA, NFL, and MLB. These sports offer data that is often randomly distributed, making it an appealing dataset for prediction. The NBA, in particular, stands out for machine learning applications because player performance across various positions can be assessed using the same set of statistics, unlike sports like the NFL where different positions are evaluated using distinct metrics. Furthermore, the use of machine learning for predicting individual athlete performances naturally extends to forecasting game outcomes. By predicting the scoring abilities of each player and aggregating them, it becomes possible to create an accurate win-loss classifier. This project aimed to develop a model using linear regression (with Naïve Bayes and SVM implementations for comparison) to predict the number of points NBA players would score against a given opponent.
-
-   _Reference_: \
-    K. Wheeler, “Predicting NBA Player Performance,” Stanford University, https://cs229.stanford.edu/proj2012/Wheeler-PredictingNBAPlayerPerformance.pdf (accessed Oct. 5, 2023).
-
-3. **Predicting the Outcomes of NBA Games** \
-   _Summary_: \
-   This paper speaks about the use of machine learning algorithms to predict the outcome of NBA games. The study used a supervised learning model. They evaluated the player and team performances using team efficiency indices. During the comparisons, the observed team was rewarded for each selected feature that it outperformed its rival. The model used data from the 2014-2018 NBA seasons. The average accuracy of the algorithm was 66% with an optimal accuracy of 78%
-
-   _Reference_: \
-    T. Horvat, J. Job, R. Logozar, and Č. Livada, “A Data-Driven Machine Learning Algorithm for Predicting the Outcomes of NBA Games,” Symmetry, vol. 15, no. 4, p. 798, Mar. 2023, doi: 10.3390/sym15040798
+In addition to feature engineering and preprocessing, model evaluation and fine-tuning play pivotal roles. Employing K-Fold cross-validation provides a robust assessment of the model's generalization performance can reduce the risk of overfitting to specific subsets of the data. Hyperparameter optimization, including adjusting learning rates, is a critical step in refining the model's architecture. Residual analysis, involving a thorough examination of the differences between predicted and actual values, ensures the model aligns with the underlying data distribution. Experimentation with ensemble methods, and creating new features contribute to a comprehensive approach for refining the model's accuracy.
 
 ### **Proposed Timeline**
 
