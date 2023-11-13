@@ -10,5 +10,5 @@ layout: base
 
 ### Current Progress
 
-[Proposal](\proposal) \
-[Midterm Report](\midterm-report)
+[Proposal](\ml-group-project\proposal) \
+[Midterm Report](\ml-group-project\midterm-report)
