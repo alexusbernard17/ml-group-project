@@ -17,8 +17,7 @@ layout: base
 [Results and Discussions](#results-and-discussions) \
 [Peer Reviewed References](#peer-reviewed-references) \
 [Proposed Timeline](#proposed-timeline) \
-[Contribution Table](#contribution-table) \
-[Checkpoint](#checkpoint)
+[Contribution Table](#contribution-table)
 
 ## **Introduction/Background**
 
@@ -100,10 +99,10 @@ This is [our proposed timeline](https://docs.google.com/spreadsheets/d/1ZIS8XA_f
 
 ## **Contribution Table**
 
-| Name                    | Contribution                               |
-| ----------------------- | ------------------------------------------ |
-| Abdul-Falik Assa        | Potential Results & Discussions, Research  |
-| Alexus Bernard Brooklyn | Introduction/Background, Methods, Research |
-| Parker Sargis Hakobyan  | Video Recording, Research                  |
-| Rafy Muhammad Akbar     | Github Page, Presentation Slides, Research |
-| Wentao Yue              | Problem Definition, Research               |
+| Name                    | Contribution                                                              |
+| ----------------------- | ------------------------------------------------------------------------- |
+| Abdul-Falik Assa        | Data Collection, Methods, Results & Discussions                           |
+| Alexus Bernard Brooklyn | Data Collection, Methods, Introduction/ Background, Results & Discussions |
+| Parker Sargis Hakobyan  | Data Collection, Methods, Results & Discussions                           |
+| Rafy Muhammad Akbar     | Data Collection, Methods, Github Page, Results & Discussions              |
+| Wentao Yue              | Data Collection, Pre-processing Data, Methods                             |
