@@ -78,11 +78,7 @@ Also, after looking at the bar chart data visualization, we can see that some of
 
 ## **Conclusion**
 
-| Model                   | Average MAE | Average R Squared | Accuracy |
-| ----------------------- | ----------- | ----------------- | -------- |
-| Linear Regression       | 0.145281    | 0.471695          | 0.642857 |
-| Random Forest Regressor | 0.104024    | 0.607992          | 0.738095 |
-| XGBoost Regressor       | 0.107421    | 0.586598          | 0.761905 |
+![Table 1](/table_conclusion.png)
 
 As shown above in the table, the accuracy of models for predicting NBA MVP players, the linear regression model achieved a 64% accuracy, while the random forest model showed improvement with 73%, and the XGBoost model surpassed both, reaching 76%. Overall, we have found that the XGBoost models performed the best. However, we have observed that the accuracy of the models is relatively consistent across all three models, which indicates that the models are not exhibiting any bias and are performing consistently across all selected features. We were initially surprised to note that XGBoost did not perform as strongly as we had hypothesized, since XGBoost is the most suitable option for handling non-linearly separable datasets. In the future, we would like to explore other models such as LightGBM to see if we can achieve a higher accuracy. Additionally, we would like to explore other methods of preprocessing the data, such as using PCA or using a different method of dimensionality reduction.
 
