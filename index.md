@@ -8,13 +8,14 @@
 layout: base
 ---
 
-## Midterm Report
+## Final Report
 
 [Introduction/Background](#introductionbackground) \
 [Problem Definition](#problem-definition) \
 [Data Collection](#data-collection) \
 [Methods](#methods) \
 [Results and Discussions](#results-and-discussions) \
+[Conclusion](#conclusion) \
 [Peer Reviewed References](#peer-reviewed-references) \
 [Proposed Timeline](#proposed-timeline) \
 [Contribution Table](#contribution-table)
@@ -29,7 +30,7 @@ We had multiple literature reviews on some of the potential methods/ implementat
 
 Basketball Player Evaluation Metrics are essential for analyzing NBA players' performances objectively. They break down a player's contributions into categories like scoring efficiency, individual value, and adjust plus-minus, providing insights for coaches and teams to make informed decisions. These metrics aid in player development and strategic planning. They also facilitate fair player comparisons, crucial in the diverse NBA. Metrics influence contract negotiations, scouting, and the draft, helping identify talent. Moreover, they engage fans by offering insights beyond on-court actions, enriching the overall experience.
 
-### **Data Collection**
+## **Data Collection**
 
 The dataset we used for data collection was gathered from the NBA official website, which contained NBA games from 1996 up until 2023. We used a Python based API web scraper to collect data from around 9 years and various seasons from 2012 to 2021. In addition, the MVP dataset is from the Basketball Performance website which shows all the MVP of the year. To make data more efficient, we selected players in each season to collect data from. The features we are most interested in looking at are the value over replacement players and win shares.
 
@@ -44,29 +45,46 @@ Dataset Links:
 
 ## **Methods**
 
-**Linear Regression**:
-Linear regression is employed to build the predictive model, leveraging libraries like scikit-learn in Python. Model evaluation involves assessing performance using metrics like Mean Squared Error, and coefficients are interpreted to understand the impact of each feature on performance.
+### **Linear Regression**
 
-**XGBoost**:
-Create an XGBoost model, using XGBRegressor for regression or XGBClassifier for classification, and train it on the designated training set. Evaluate the model on the testing set using appropriate metrics, such as Mean Squared Error for regression or Accuracy for classification.
+In the situation of predicting player performance, Linear Regression provides a clear understanding of the linear relationships between variables. It is particularly useful when the relationships between features and performance are relatively straightforward and can be adequately represented by a linear equation. Linear Regression also allows for easy interpretation of coefficients, providing insights into the direction and strength of the relationships between specific player attributes and overall performance. Its simplicity and transparency are the advantageous for gaining a basic understanding of the factors influencing NBA player success.
 
-**LightGBM Regressor**
-Install LightGBM, set regression parameters, and create LightGBM datasets. Train the model and evaluate its performance using mean squared error on the testing set. Analyze feature importance to understand the factors influencing player performance.
+### **Random Forest**
 
-### **Results and Discussions**
+Random Forest, as an ensemble learning algorithm, is a good choice for NBA player analysis. Its strength lies in its ability to build multiple decision trees independently and then combine their predictions to create a robust and accurate model. In the context of NBA player evaluation, Random Forest's ensemble approach helps mitigate overfitting and enhances the model's generalization to new data. Additionally, the algorithm provides valuable insights into feature importance, aiding in the identification of key player attributes that significantly contribute to overall performance. With Random Forest's robustness to missing values and ease of tuning hyperparameters, it emerges as a reliable tool for extracting actionable information from the diverse and dynamic datasets associated with NBA player statistics.
 
-For this Midterm report, we are creating a model to predict the MVP winner for each NBA Regular Season. We already have cleaned pre-processed data as mentioned from the Data Cleaning section above for our model. For Data Pre-Processing, we had to do some feature selections on selecting which statistics we wanted to use to train our model to predict the MVP, all of which have been discussed in our Data Collection Section. We decided to use Linear Regression Supervised Learning to create, train and test our model and we and here are the results:
+### **XGBoost**
 
-- **Average MAE**: 0.1453
-- **Average R Squared**: 0.4717
-- **Prediction Accuracy**: 0.6483
+XGBoost is a powerful machine learning algorithm that is particularly well-suited for NBA player analysis and prediction. Its ability to handle non-linear relationships and capture complex patterns in the data makes it ideal for modeling the intricate and multifaceted nature of player performance. XGBoost's sequential learning process, where each tree corrects the errors of the previous ones, enables it to iteratively improve its predictions, providing a nuanced understanding of the factors influencing a player's success on the basketball court. Moreover, XGBoost's efficiency and scalability make it a practical choice for processing large datasets, ensuring that it can effectively analyze extensive historical player data to generate meaningful insights for player evaluation and prediction.
 
-![Result 1](/result.png)
-![Result 2](/result2.png)
+## **Results and Discussions**
 
-To improve our model for the future iterations, here are some ideas that we think might be good for us to implement. To enhance the performance of our linear regression model, we can also curate the feature set by selecting those with a strong linear relationship to the target variable and eliminating irrelevant or redundant ones that might introduce noise. Some more preprocessing can also be done by handling missing data through imputation or removal and addressing outliers that can significantly impact model accuracy. We should also think about normalizing or standardizing features aids in achieving convergence and stability. Incorporation of polynomial features can further enhance the model's ability to capture complex, non-linear relationships within the data. Multicollinearity, a potential source of instability, should be identified and mitigated by removing highly correlated features in our dataset, and regularization techniques such as L1 or L2 regularization can be applied to prevent overfitting.
+We chose to build our prediction model using three methods - Linear Regression, Random Forest, and XGBoost. We chose these three models because they are relatively simple to implement and are computationally efficient. Additionally, we chose to use these models because they are well suited for binary classification problems, which is the type of problem we are trying to solve. After finally deciding and implementing Linear Regression, Random Forest, and XGBoost Regressor for our prediction methods to create, train, and test our model, here are the final results:
 
-In addition to feature engineering and preprocessing, model evaluation and fine-tuning play pivotal roles. Employing K-Fold cross-validation provides a robust assessment of the model's generalization performance can reduce the risk of overfitting to specific subsets of the data. Hyperparameter optimization, including adjusting learning rates, is a critical step in refining the model's architecture. Residual analysis, involving a thorough examination of the differences between predicted and actual values, ensures the model aligns with the underlying data distribution. Experimentation with ensemble methods, and creating new features contribute to a comprehensive approach for refining the model's accuracy.
+![Result 1](/merged_table.jpeg)
+![Result 2](/merged_pie_chart.png)
+
+As we can see, among our three methods, the XGBoost Regression model had the best accuracy among the other 2 methods. The results of our predictive models provide valuable insights into their performance. In terms of Linear Regression, we observed an average Mean Absolute Error (MAE) of 0.145, indicating the average absolute difference between the predicted and actual values. The R-squared value of approximately 0.47 suggests that around 47% of the variance in the data is explained by the model. The prediction accuracy, computed as 64.29%, reflects the proportion of correct predictions out of the total instances.
+
+Moving on to the Random Forest model, it demonstrated improved performance compared to Linear Regression. With an average MAE of 0.104, the model exhibited a reduced error in predictions. The R squared value increased to approximately 0.61, indicating a higher degree of variance explained by the model. The prediction accuracy also improved to 73.81%, showcasing the effectiveness of Random Forest in capturing complex relationships within the data.
+
+Similarly, the XGBoost Regression model delivered competitive results with an average MAE of 0.107. The R-squared value of around 0.59 indicates a robust explanatory power of the model. Notably, the prediction accuracy reached 76.19%, surpassing both Linear Regression and Random Forest. These results highlight the superior predictive capabilities of XGBoost Regression in our context, suggesting its suitability for our prediction task. Overall, the comparative analysis underscores the importance of selecting the appropriate regression model based on the specific characteristics and requirements of the dataset.
+
+Based on the data presented in the pie charts, it is evident that all three models have produced somewhat comparable accuracy, which indicates satisfactory performance for our specific use case. However, it should be noted that the efficacy of each model cannot be generalized, as they have their unique strengths and limitations. For instance, we have observed that Linear Regression and Random Forest are computationally efficient and straightforward to implement. On the other hand, XGBoost are the most suitable option for handling non-linearly separable datasets, but XGboost are computationally expensive and comparatively more complex than the other two models.
+
+![Result 3](/merged_bar_chart.jpeg)
+
+Also, after looking at the bar chart data visualization, we can see that some of the players who actually won the MVP were never predicted by any of our models. Players like Steve Nash, Hakeem Olajuwon, and Charles Barkley was never once predicted in any of our models, since they may not have the most compelling statistic for that particular season, however their impact, leadership, non-statistical contribution to the team, and also the team’s success also plays a role for players to win the MVP. Hence, it is difficult for a machine learning model to fully predict and accurately predict a MVP winner for the NBA because there’s just too many variables and external factors that have to be weighed in by the actual selection committee. Sometimes there are also human and emotional factors that weigh into the actual decisions in sports and especially in the NBA, which could not be predicted by a computer with data and statistics only.
+
+## **Conclusion**
+
+| Model                   | Average MAE | Average R Squared | Accuracy |
+| ----------------------- | ----------- | ----------------- | -------- |
+| Linear Regression       | 0.145281    | 0.471695          | 0.642857 |
+| Random Forest Regressor | 0.104024    | 0.607992          | 0.738095 |
+| XGBoost Regressor       | 0.107421    | 0.586598          | 0.761905 |
+
+As shown above in the table, the accuracy of models for predicting NBA MVP players, the linear regression model achieved a 64% accuracy, while the random forest model showed improvement with 73%, and the XGBoost model surpassed both, reaching 76%. Overall, we have found that theXGBoost models performed the best. However, we have observed that the accuracy of the models is relatively consistent across all three models, which indicates that the models are not exhibiting any bias and are performing consistently across all selected features. We were initially surprised to note that XGBoost did not perform as strongly as we had hypothesized, sinceXGBoost is the most suitable option for handling non-linearly separable datasets. In the future, we would like to explore other models such as LightGBM to see if we can achieve a higher accuracy. Additionally, we would like to explore other methods of preprocessing the data, such as using PCA or using a different method of dimensionality reduction.
 
 ## **Peer Reviewed References**
 
@@ -99,10 +117,10 @@ This is [our proposed timeline](https://docs.google.com/spreadsheets/d/1ZIS8XA_f
 
 ## **Contribution Table**
 
-| Name                    | Contribution                                                              |
-| ----------------------- | ------------------------------------------------------------------------- |
-| Abdul-Falik Assa        | Data Collection, Methods, Results & Discussions                           |
-| Alexus Bernard Brooklyn | Data Collection, Methods, Introduction/ Background, Results & Discussions |
-| Parker Sargis Hakobyan  | Data Collection, Methods, Results & Discussions                           |
-| Rafy Muhammad Akbar     | Data Collection, Methods, Github Page, Results & Discussions              |
-| Wentao Yue              | Data Collection, Pre-processing Data, Methods                             |
+| Name                    | Contribution                                                |
+| ----------------------- | ----------------------------------------------------------- |
+| Abdul-Falik Assa        | Data Visualization, Final Presentation PPTX, Conclusion     |
+| Alexus Bernard Brooklyn | Data Visualization, Final presentation PPTX, Conclusion     |
+| Parker Sargis Hakobyan  | Final presentation pptx, Result and Discussions, Conclusion |
+| Rafy Muhammad Akbar     | Final presentation pptx, Results and Discussions, Github    |
+| Wentao Yue              | Methods, Final presentation pptx, Result and Discussion     |
